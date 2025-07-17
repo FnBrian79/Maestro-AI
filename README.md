@@ -1,4 +1,4 @@
-# ⭐ Stardit - The Generative Mindset Platform
+# ⭐ Maestro AI- The Generative Mindset Platform
 
 *Where Human intuition meets AI capability in collaborative creation*
 
