@@ -1,0 +1,13 @@
+{
+    "editor.formatOnSave": true,
+    "telemetry.editStats.details.enabled": true,
+    "telemetry.editStats.showStatusBar": true,
+    "telemetry.editStats.showDecorations": true,
+    "application.experimental.rendererProfiling": true,
+    "dotnetAcquisitionExtension.allowInvalidPaths": true,
+    "files.exclude": {
+        ".md": true
+    },
+    "editor.mouseWheelZoom": true,
+    "editor.formatOnPaste": true
+}
