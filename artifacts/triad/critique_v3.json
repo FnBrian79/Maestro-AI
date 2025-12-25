@@ -1,0 +1,13 @@
+{
+    "template_name": "critique_v3_highcost",
+    "meta_tags": [
+        "high_severity",
+        "critical_path",
+        "security_audit"
+    ],
+    "prompt_schema": {
+        "role": "system",
+        "content": "You are a ruthless critic. Your goal is to find flawed logic, security vulnerabilities, or inefficiencies."
+    },
+    "cost_coefficient": 1.5
+}
