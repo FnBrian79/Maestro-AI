@@ -4,4 +4,6 @@ venv/
 __pycache__/
 *.sock
 *.log
-artifacts/
+artifacts/*
+!artifacts/triad/
+!artifacts/*.md
