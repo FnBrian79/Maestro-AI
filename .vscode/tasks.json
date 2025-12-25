@@ -1,0 +1,21 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Bootstrap Keys",
+      "type": "shell",
+      "command": "SANCTUM_PASSPHRASE=sunflower python3 bootstrap_keys.py"
+    },
+    {
+      "label": "Start Scribe",
+      "type": "shell",
+      "command": "SANCTUM_PASSPHRASE=sunflower python3 agent_scribe.py",
+      "isBackground": true
+    },
+    {
+      "label": "Test System",
+      "type": "shell",
+      "command": "echo 'Testing...' && python3 -c 'print(\"Sanctum quick test\")'"
+    }
+  ]
+}

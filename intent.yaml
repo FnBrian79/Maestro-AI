@@ -1,0 +1,12 @@
+primary_objective: "Deploy cryptographically sovereign AI orchestration system"
+
+constraints:
+  - "All artifacts cryptographically signed"
+  - "No cleartext secrets"
+  - "Immutable audit trail"
+
+context_sources:
+  - "artifacts/lineage.jsonl"
+  - "artifacts/triad/"
+
+output_format: "Executive Summary + Verification Status"
