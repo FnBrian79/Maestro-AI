@@ -1,0 +1,9 @@
+# .dockerignore
+keys/
+*.pem
+venv/
+__pycache__/
+*.sock
+*.log
+artifacts/lineage.jsonl
+# We keep governance/ and intent.yaml

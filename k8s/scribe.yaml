@@ -1,0 +1,55 @@
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: sanctum-scribe
+spec:
+  serviceName: "scribe"
+  replicas: 1
+  selector:
+    matchLabels:
+      app: scribe
+  template:
+    metadata:
+      labels:
+        app: scribe
+    spec:
+      containers:
+      - name: scribe
+        image: sanctum-scribe:latest
+        imagePullPolicy: IfNotPresent
+        env:
+        - name: SANCTUM_PASSPHRASE
+          valueFrom:
+            secretKeyRef:
+              name: sanctum-secrets
+              key: passphrase
+        volumeMounts:
+        - name: keys-volume
+          mountPath: /app/keys
+          readOnly: true
+        - name: artifacts-storage
+          mountPath: /app/artifacts
+      volumes:
+      - name: keys-volume
+        secret:
+          secretName: sanctum-keys
+  volumeClaimTemplates:
+  - metadata:
+      name: artifacts-storage
+    spec:
+      accessModes: [ "ReadWriteOnce" ]
+      resources:
+        requests:
+          storage: 1Gi
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: scribe-service
+spec:
+  clusterIP: None
+  selector:
+    app: scribe
+  ports:
+  - port: 80
+    name: socket
