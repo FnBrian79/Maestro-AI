@@ -1,0 +1,12 @@
+{
+    "version": "1.0",
+    "law": "BONE_ZERO_COMPLIANCE",
+    "authorized_vectors": [
+        "SOV-DELTA-39"
+    ],
+    "forbidden_residue": [
+        "PII_NAME",
+        "PII_SSN",
+        "METRIC_RAW_WEIGHT"
+    ]
+}

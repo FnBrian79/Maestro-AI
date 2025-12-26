@@ -8,5 +8,6 @@ constraints:
 context_sources:
   - "artifacts/lineage.jsonl"
   - "artifacts/triad/"
+  - "engines/paradox/"
 
 output_format: "Executive Summary + Verification Status"
